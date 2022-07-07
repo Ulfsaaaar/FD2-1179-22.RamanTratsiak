@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANKETA</title>
+</head>
+<body>
+    <script>
+       //не смог пока что разобраться как делать проверку по символа(((
+        var lastname=prompt('Введите вашу фамилию');
+        var name=prompt('Введите ваше имя'); 
+        var father_name=prompt('Введите ваше отчество'); 
+        do {
+        var ageStr=prompt('Введите ваш возраст');
+        var age=parseInt(ageStr);
+         } while ( isNaN(age) );
+        var after_5_years=age+5;
+        var days=age*365; 
+        var gender=confirm('Ваш пол мужской?'); 
+        var text_gender=gender ? 'Мужской' : 'Женский'; 
+        var pensioner;
+        if (age<65) { 
+            pensioner='Нет'; 
+        }
+        else {
+            pensioner='Да';
+        }
+        alert('Ваше ФИО: '+(lastname)+' '+(name)+' '+(father_name)+'\nВаш возраст в годах: '+(age)+'\nВаш возраст в днях: '+(days)+'\nЧерез 5 лет Вам будет: '+(after_5_years)+'\nВаш пол: '+(text_gender)+'\nВы на пенсии: '+(pensioner));
+    </script>
+</body>
+</html>
