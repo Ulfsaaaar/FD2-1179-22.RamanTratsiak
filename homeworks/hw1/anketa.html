@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANKETA</title>
+</head>
+<body>
+  <script>
+    
+    let name;
+    let subname;
+    let lastname;
+    let age; 
+    let result;
+
+
+  do {
+    lastname =prompt('Введите вашу фамилию');
+  } while (isNaN(lastname) == false || lastname ==="");
+
+  do {
+    name =prompt('Введите ваше имя');
+  } while (isNaN(name) == false || name ==="");
+
+  do {
+    subname =prompt('Введите ваше отчество');
+  } while (isNaN(subname) == false || subname ==="");
+
+  do {
+    age = parseInt(prompt('Введите возраст в годах'));
+  } while (isNaN(age) || age > 100);
+
+
+  let daysAge = age * 365;
+  let after5 = age + 5;
+  let gender = confirm('Ваш пол - мужской?');
+
+  if (age > 63 && gender===true) {
+    result = ('ваше ФИО: '+ lastname + ' ' + name + ' ' + subname + '\n' + 'ваш возраст в годах: ' + age + '\n' + 'ваш возраст в днях: ' + daysAge + '\n' + 'через 5 лет вам будет: ' + after5 + '\n' + 'ваш пол: мужской \n' + 'вы на пенсии: да');
+  }
+  else if (age < 63 && gender===true) {
+    result = ('ваше ФИО: '+ lastname + ' ' + name + ' ' + subname + '\n' + 'ваш возраст в годах: ' + age + '\n' + 'ваш возраст в днях: ' + daysAge + '\n' + 'через 5 лет вам будет: ' + after5 + '\n' + 'ваш пол: мужской \n' + 'вы на пенсии: нет');
+  }
+  else if (age > 58 && gender===false) {
+    result = ('ваше ФИО: '+ surname + ' ' + name + ' ' + subname + '\n' + 'ваш возраст в годах: ' + age + '\n' + 'ваш возраст в днях: ' + daysAge + '\n' + 'через 5 лет вам будет: ' + after5 + '\n' + 'ваш пол: женский \n' + 'вы на пенсии: да');
+  }
+  else if (age < 58 && gender===false) {
+    result = ('ваше ФИО: '+ lastname + ' ' + name + ' ' + subname + '\n' + 'ваш возраст в годах: ' + age + '\n' + 'ваш возраст в днях: ' + daysAge + '\n' + 'через 5 лет вам будет: ' + after5 + '\n' + 'ваш пол: женский \n' + 'вы на пенсии: нет');
+  }
+
+  alert (result);
+
+</script>
+
+</body>
+</html>
