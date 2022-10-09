@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function numChar (){
+        const songChar = ["А","а", "ё","Ё","е","Е","У","у","О","о","Ы","ы","И","и","Э","э","я","Я","Ю","ю"];
+        const getStrFromUser = prompt("Введите любой текст на русском языке");
+        let count = 0;
+
+        for (let i =0; i<getStrFromUser.length; i++) {
+            if (songChar.includes(getStrFromUser[i])) {
+                count++;
+            }
+        }    
+        alert("Колличестве гласных букв:  "+count);
+        }
+        numChar ();
+    </script>
+    <a href="../pages.html">на главную</a><br>
+</body>
+</html>
